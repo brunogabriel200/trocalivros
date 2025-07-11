@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 botaoExcluir.addEventListener("click", async (e) => {
                     e.stopPropagation();
                     const id = e.target.getAttribute("data-id");
-                    const res = await fetch(`http://localhost:3000/livros/${id}`, { method: "DELETE" });
+                    const res = await fetch(`http://137.131.199.67/livros/${id}`, { method: "DELETE" });
                     const result = await res.json();
                     if (res.ok) {
                         alert(result.mensagem);
@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 reader.readAsDataURL(file);
             });
 
-            
             const dataTransfer = new DataTransfer();
             imagensSelecionadas.forEach(img => dataTransfer.items.add(img));
             inputImagem.files = dataTransfer.files;
@@ -187,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             numeroPessoa
         };
 
-        fetch("http://localhost:3000/livros", {
+        fetch("http://137.131.199.67/livros", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(livro)
