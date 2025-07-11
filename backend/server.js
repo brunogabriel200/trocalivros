@@ -9,6 +9,11 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
+
+app.get('/', (req, res) => {
+  res.send('API do Troca Livros está rodando!');
+});
+
 app.post('/cadastro', (req, res) => {
   const { nome, email, senha } = req.body;
   const query = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
@@ -52,7 +57,7 @@ app.post('/livros', (req, res) => {
   connection.query(
     query,
     [titulo, autor, genero, descricao, imagensJson, nomePessoa, numeroPessoa],
-    (err, result) => {
+    (err) => {
       if (err) {
         console.error('Erro ao salvar livro:', err);
         return res.status(500).json({ erro: 'Erro ao salvar livro no banco' });
@@ -90,5 +95,5 @@ app.delete('/livros/:id', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://0.0.0.0:${PORT}`);
 });
