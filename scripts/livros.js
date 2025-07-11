@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         livrosContainer.innerHTML = "";
 
         try {
-            const response = await fetch("http://localhost:3000/livros");
+            const response = await fetch('http://137.131.199.67/livros');
             const livros = await response.json();
 
             if (!Array.isArray(livros) || livros.length === 0) {
