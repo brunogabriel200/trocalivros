@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   const senha = document.querySelector('#password').value;
 
   try {
-    const resposta = await fetch('http://localhost:3000/cadastro', {
+    const resposta = await fetch('https://trocalivros.duckdns.org/cadastro', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nome, email, senha })
