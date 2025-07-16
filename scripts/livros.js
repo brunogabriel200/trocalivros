@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         livrosContainer.innerHTML = "";
 
         try {
-            const response = await fetch('http://137.131.199.67/livros');
+            const response = await fetch('https://trocalivros.duckdns.org/livros');
             const livros = await response.json();
 
             if (!Array.isArray(livros) || livros.length === 0) {
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 botaoExcluir.addEventListener("click", async (e) => {
                     e.stopPropagation();
                     const id = e.target.getAttribute("data-id");
-                    const res = await fetch(`http://137.131.199.67/livros/${id}`, { method: "DELETE" });
+                    const res = await fetch(`https://trocalivros.duckdns.org/livros${id}`, { method: "DELETE" });
                     const result = await res.json();
                     if (res.ok) {
                         alert(result.mensagem);
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             numeroPessoa
         };
 
-        fetch("http://137.131.199.67/livros", {
+        fetch("https://trocalivros.duckdns.org/livros", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(livro)
