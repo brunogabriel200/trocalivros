@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 botaoExcluir.addEventListener("click", async (e) => {
                     e.stopPropagation();
                     const id = e.target.getAttribute("data-id");
-                    const res = await fetch(`https://trocalivros.duckdns.org/livros${id}`, { method: "DELETE" });
+                    const res = await fetch(`https://trocalivros.duckdns.org/livros/${id}`, { method: "DELETE" });
                     const result = await res.json();
                     if (res.ok) {
                         alert(result.mensagem);
