@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+
   <div class="suporte">
     <strong>Suporte</strong><br>
     brunomori404@edu.unifil.br
   </div>
-    
-    <img src="../images/logo.png" alt="Logo Troca Livros" class="logo">
-    <h1> Troca De livros</h1> 
-    <h2>Cadastro</h2>
 
-    <form id="cadastroForm">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <label for="Numero">Número De Celular:</label>
-        <input type="numero" id="number" name="number"  maxlength="13" required><br><br>
-        <button type="submit">Cadastrar</button>
-    </form>
-    <nav>
-        <a href="../pages/login.html">Página de Login</a>
-    </nav>
-    <script src="../scripts/cadastro.js"></script>
+  <img src="../images/logo.png" alt="Logo Troca Livros" class="logo">
+  <h1> Troca De livros</h1> 
+  <h2>Cadastro</h2>
+
+  <form id="cadastroForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="Numero">Número De Celular:</label>
+    <input type="numero" id="number" name="number" maxlength="13" required><br><br>
+    
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <nav>
+    <a href="../pages/login.html">Página de Login</a>
+  </nav>
+
+  <script src="../scripts/cadastro.js"></script>
 </body>
 </html>
