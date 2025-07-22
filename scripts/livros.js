@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const files = Array.from(event.target.files);
 
             files.forEach(file => {
-                if (file.size > 2 * 1024 * 1024) {
+                if (file.size > 5 * 1024 * 1024) {
                     alert(`A imagem "${file.name}" ultrapassa o limite de 2MB e será ignorada.`);
                     return;
                 }
