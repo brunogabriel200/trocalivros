@@ -210,16 +210,14 @@ nav a.btn-login:hover {
     background-color: #2980b9;
 }
 
-.suporte-info {
+.suporte {
   position: fixed;
   top: 10px;
-  right: 10px;
-  background-color: white;
-  color: black;
-  padding: 8px 12px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  z-index: 999;
+  right: 20px;
   text-align: right;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: black;
+  z-index: 1000;
 }
+
