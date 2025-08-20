@@ -90,7 +90,7 @@ button {
     background-color: #3db824;
     padding: 15px;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     margin: 10px 0;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -220,5 +220,6 @@ nav a.btn-login:hover {
   color: black;
   z-index: 1000;
 }
+
 
 
